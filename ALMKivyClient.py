@@ -46,7 +46,7 @@ class MyApp(GridLayout):
 
 
         s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        host=socket.gethostname()
+        host='192.168.1.5'
         port=9999
         s.connect((host,port))
 
