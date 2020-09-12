@@ -33,7 +33,7 @@ class MyApp(GridLayout):
                 s.send((str("Client: ")+str(message)).encode("utf-8"))
             elif message and tags[-1]>int(10):
                 self.chats.text += "\n" + str("Client: ") + str(message)
-                s.send((str(tags[-1]) + str("Client: ")+str(message)).encode("utf-8"))
+                s.send((str(tags[-1]) + str("Client: ")+str(message)+ str("~")).encode("utf-8"))
             else:
                 self.chats.text += "\n" + str("You did not send a message")
 
@@ -46,7 +46,7 @@ class MyApp(GridLayout):
 
 
         s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        host='192.168.1.5'
+        host='197.214.117.210'
         port=9999
         s.connect((host,port))
 
